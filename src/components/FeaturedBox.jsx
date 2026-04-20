@@ -1,41 +1,43 @@
 const FeaturedBox = () => {
   return (
-    <section className="bg-[#f5f5f3] py-24">
+    <section className="bg-[#f5f5f3] py-16 pb-12">
       <div className="mx-auto max-w-7xl px-4">
-        <div className="relative overflow-hidden rounded-[28px] bg-[#e9e9e6] min-h-[520px]">
+        <div className="relative overflow-hidden rounded-[28px] bg-[#e9e9e6] min-h-[auto] lg:min-h-[520px]">
           
-          {/* Imagen izquierda */}
-          <div className="h-[520px] w-full lg:w-[62%]">
+          {/* Imagen */}
+          <div className="h-[260px] w-full lg:h-[520px] lg:w-[62%]">
             <img
-              src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1400&q=80"
-              alt="Paciente en clínica de fisioterapia"
+              src="/fisioterapia.jpg"
+              alt="Fisioterapia profesional"
               className="h-full w-full object-cover"
             />
           </div>
 
-          {/* Caja de contenido derecha */}
+          {/* Caja texto */}
           <div className="relative lg:absolute lg:right-12 lg:top-1/2 lg:w-[42%] lg:-translate-y-1/2">
-            <div className="m-4 rounded-[24px] bg-white p-8 shadow-[0_20px_60px_rgba(0,0,0,0.12)] sm:p-10 md:p-12">
-              <h2 className="text-3xl font-extrabold leading-tight text-black sm:text-4xl">
+            <div className="m-4 rounded-[24px] bg-white p-6 shadow-[0_20px_60px_rgba(0,0,0,0.12)] sm:p-8 md:p-10">
+              
+              <h2 className="text-2xl font-extrabold leading-tight text-black sm:text-4xl">
                 Recupera tu bienestar con un tratamiento{' '}
-                <span className="text-yellow-500">personalizado</span>
+                <span className="text-[#E4B525]">personalizado</span>
               </h2>
 
-              <p className="mt-5 text-base leading-8 text-neutral-600 sm:text-lg">
+              <p className="mt-4 text-sm leading-7 text-neutral-600 sm:text-lg">
                 En Fisioprotema estudiamos tu caso de forma individual para ayudarte
-                a reducir el dolor, mejorar tu movilidad y acelerar tu recuperación
-                con un enfoque profesional y cercano.
+                a reducir el dolor, mejorar tu movilidad y acelerar tu recuperación.
               </p>
 
-              <div className="mt-8">
+              <div className="mt-6">
                 <a
                   href="https://wa.me/34637883587"
                   target="_blank"
                   rel="noreferrer"
-className="inline-flex rounded-xl bg-yellow-400 px-7 py-4 text-base font-bold text-black transition hover:bg-yellow-300"                >
+                  className="inline-flex rounded-xl bg-[#E4B525] px-6 py-3 text-sm font-bold text-black transition hover:bg-yellow-300 sm:px-7 sm:py-4 sm:text-base"
+                >
                   Pide tu cita
                 </a>
               </div>
+
             </div>
           </div>
         </div>

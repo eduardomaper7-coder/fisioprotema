@@ -25,7 +25,7 @@ const Testimonials = () => {
             Lo que dicen nuestros pacientes
           </h2>
 
-          <div className="mt-5 text-2xl tracking-[0.2em] text-yellow-400">
+          <div className="mt-5 text-2xl tracking-[0.2em] text-[#E4B525]">
             ★★★★★
           </div>
 
@@ -38,18 +38,20 @@ const Testimonials = () => {
           {reviews.map((review, index) => (
             <article
               key={index}
-              className="flex min-h-[380px] flex-col rounded-xl bg-white p-7 shadow-[0_8px_24px_rgba(0,0,0,0.08)]"
+              className="flex min-h-[340px] flex-col rounded-xl bg-white p-6 shadow-[0_8px_24px_rgba(0,0,0,0.08)] sm:min-h-[360px] sm:p-7"
             >
-              <div className="mb-6 text-xl tracking-[0.18em] text-yellow-400">
+              <div className="mb-5 text-lg tracking-[0.18em] text-[#E4B525] sm:text-xl">
                 ★★★★★
               </div>
 
-              <p className="flex-1 text-[15px] leading-8 text-neutral-700">
+              <p className="flex-1 text-sm leading-7 text-neutral-700 sm:text-[15px] sm:leading-8">
                 {review.text}
               </p>
 
-              <div className="mt-8">
-                <p className="text-xl font-bold text-[#005f73]">{review.name}</p>
+              <div className="mt-6 sm:mt-8">
+                <p className="text-lg font-bold text-black sm:text-xl">
+                  {review.name}
+                </p>
                 <p className="mt-1 text-sm text-neutral-500">{review.time}</p>
               </div>
             </article>

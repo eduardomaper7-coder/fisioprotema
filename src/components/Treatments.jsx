@@ -110,10 +110,11 @@ const Treatments = () => {
                   </p>
 
                   {service.psychology && (
-                    <p className="mt-3 whitespace-nowrap text-sm font-semibold text-neutral-700">
-                      WhatsApp exclusivo para psicología: 683 37 97 71
-                    </p>
-                  )}
+  <p className="mt-3 text-sm font-semibold leading-6 text-neutral-700">
+    WhatsApp exclusivo para psicología:
+    <span className="block md:inline"> 683 37 97 71</span>
+  </p>
+)}
                 </div>
 
                 <div className="mt-6 flex flex-wrap gap-4">

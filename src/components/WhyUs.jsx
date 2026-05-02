@@ -4,14 +4,18 @@ const slides = [
   {
     image:
       'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Doctora sonriendo en clínica',
-    badge: 'Profesionalidad y atención personalizada',
+    alt: 'Pilar Cejudo fisioterapeuta',
+    name: 'Pilar Cejudo',
+    role: 'Fisioterapeuta',
+    stat: '+500 pacientes atendidos',
   },
   {
     image:
       'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Doctor profesional en consulta',
-    badge: 'Calidad asistencial y experiencia clínica',
+    alt: 'Especialista en fisioterapia',
+    name: 'Nombre Apellido',
+    role: 'Fisioterapeuta',
+    stat: '+10 años de experiencia',
   },
 ]
 
@@ -40,6 +44,7 @@ const features = [
 
 const WhyUs = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const activeSlide = slides[currentSlide]
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -74,17 +79,36 @@ const WhyUs = () => {
               profesional, cercano y basado en la evidencia.
             </p>
 
-            <div className="mt-10 space-y-8">
-              {features.map((feature, index) => (
-                <div key={index}>
-                  <h3 className="text-2xl font-extrabold text-[#E4B525]">
-                    {feature.title}
-                  </h3>
-                  <p className="mt-2 text-lg text-neutral-600">
-                    {feature.text}
-                  </p>
-                </div>
-              ))}
+            {/* FEATURES */}
+            <div className="mt-10 space-y-4">
+              {features.map((feature, index) => {
+                const isYellow = index % 2 === 0
+
+                return (
+                  <div
+                    key={index}
+                    className={`rounded-2xl p-5 transition ${
+                      isYellow ? 'bg-[#E4B525] text-black' : 'bg-transparent'
+                    } md:bg-transparent md:p-0`}
+                  >
+                    <h3
+                      className={`text-xl font-extrabold ${
+                        isYellow ? 'text-black' : 'text-[#E4B525]'
+                      } md:text-[#E4B525]`}
+                    >
+                      {feature.title}
+                    </h3>
+
+                    <p
+                      className={`mt-2 text-base leading-7 ${
+                        isYellow ? 'text-black/90' : 'text-neutral-600'
+                      }`}
+                    >
+                      {feature.text}
+                    </p>
+                  </div>
+                )
+              })}
             </div>
           </div>
         </div>
@@ -109,8 +133,13 @@ const WhyUs = () => {
               <div className="absolute inset-0 bg-black/20"></div>
 
               <div className="absolute left-6 top-6 z-10 max-w-sm rounded-2xl bg-white/95 px-5 py-4 shadow-lg backdrop-blur-sm">
-                <p className="text-base font-bold leading-7 text-black">
-                  {slides[currentSlide].badge}
+                <p className="text-lg font-extrabold leading-7 text-black">
+                  {activeSlide.name},{' '}
+                  <span className="font-semibold">{activeSlide.role}</span>
+                </p>
+
+                <p className="mt-2 text-base font-bold text-[#E4B525]">
+                  {activeSlide.stat}
                 </p>
               </div>
             </div>

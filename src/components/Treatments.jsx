@@ -24,7 +24,7 @@ const services = [
   {
     title: 'Pilates Funcional',
     description:
-  'Mejora tu fuerza, movilidad y control corporal con ejercicio terapéutico adaptado a tus necesidades. Ideal para prevenir lesiones, mejorar la postura y reducir el dolor de espalda.',
+      'Mejora tu fuerza, movilidad y control corporal con ejercicio terapéutico adaptado a tus necesidades. Clases reducidas, guiadas por profesionales, ideales para prevenir lesiones, mejorar la postura y reducir el dolor de espalda.',
     image:
       'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=80',
   },
@@ -44,9 +44,9 @@ const services = [
 
 const Treatments = () => {
   return (
-    <section id="servicios" className="scroll-mt-28 bg-[#f5f5f3] py-24">
+    <section id="servicios" className="scroll-mt-28 bg-[#f5f5f3] py-20 md:py-24">
       <div className="mx-auto max-w-7xl px-4">
-        <div className="mb-16 text-center">
+        <div className="mb-12 text-center md:mb-16">
           <h2 className="text-3xl font-extrabold text-[#E4B525] sm:text-4xl">
             Nuestros servicios
           </h2>
@@ -61,15 +61,15 @@ const Treatments = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className={`flex overflow-hidden rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition hover:shadow-[0_15px_40px_rgba(0,0,0,0.12)] ${
+              className={`overflow-hidden rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition hover:shadow-[0_15px_40px_rgba(0,0,0,0.12)] md:flex ${
                 service.featured
-                  ? 'md:col-span-2 bg-white'
+                  ? 'bg-white md:col-span-2'
                   : service.psychology
                   ? 'border-2 border-[#E4B525] bg-[#fff8df]'
                   : 'bg-white'
               }`}
             >
-              <div className={service.featured ? 'w-[45%]' : 'w-[40%]'}>
+              <div className="h-56 w-full md:h-auto md:w-[40%]">
                 <img
                   src={service.image}
                   alt={service.title}
@@ -78,8 +78,8 @@ const Treatments = () => {
               </div>
 
               <div
-                className={`flex flex-col justify-between ${
-                  service.featured ? 'w-[55%] p-8 md:p-10' : 'w-[60%] p-6'
+                className={`flex flex-col justify-between p-6 ${
+                  service.featured ? 'md:w-[60%] md:p-10' : 'md:w-[60%]'
                 }`}
               >
                 <div>
@@ -92,7 +92,7 @@ const Treatments = () => {
                   <h3
                     className={`font-extrabold text-black ${
                       service.featured
-                        ? 'text-3xl sm:text-4xl'
+                        ? 'text-2xl md:text-4xl'
                         : 'text-xl sm:text-2xl'
                     }`}
                   >
@@ -110,9 +110,9 @@ const Treatments = () => {
                   </p>
 
                   {service.psychology && (
-                    <p className="mt-3 text-sm font-semibold text-neutral-700">
-  WhatsApp exclusivo para psicología: 683379771
-</p>
+                    <p className="mt-3 whitespace-nowrap text-sm font-semibold text-neutral-700">
+                      WhatsApp exclusivo para psicología: 683 37 97 71
+                    </p>
                   )}
                 </div>
 

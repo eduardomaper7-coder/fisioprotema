@@ -12,7 +12,7 @@ const Hero = () => {
       }}
     >
       {/* Filtro negro */}
-      <div className="absolute inset-0 bg-black/35"></div>
+      
 
       {/* Degradado */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/45 to-black/70"></div>

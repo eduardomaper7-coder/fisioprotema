@@ -1,38 +1,62 @@
 const plans = [
   {
-    title: 'Sesión individual',
-    price: '60€',
-    subtitle: 'Una sesión de fisioterapia',
+    title: 'Sesión de fisioterapia',
+    price: '45€',
+    subtitle: 'Sesión individual',
     badge: '',
+    featured: false,
   },
   {
-    title: 'Pack 3 sesiones',
-    price: '162€',
-    subtitle: '10% de descuento',
-    badge: 'Ahorro de 18€',
+    title: 'Fisioterapia mayores de 65 años',
+    price: '40€',
+    subtitle: 'Sesión individual',
+    badge: 'Tarifa especial',
+    featured: false,
   },
   {
-    title: 'Pack 5 sesiones',
-    price: '240€',
-    subtitle: '20% de descuento',
-    badge: 'Ahorro de 60€',
+    title: 'Bono 3 sesiones de fisioterapia',
+    price: '126€',
+    subtitle: '3 sesiones',
+    badge: 'Ahorro de 9€',
+    featured: true,
   },
-]
-
-const conditions = [
-  'Los packs tienen una caducidad de 6 meses.',
-  'Fisioprotema se compromete a avisar con un mes de antelación a la fecha de caducidad.',
-  'El pack puede ser compartido por varias personas.',
-  'La anulación de una sesión deberá ser notificada con 24 horas de antelación. Si no fuese así, la sesión contará como dada.',
-  'No se devolverá el dinero de las sesiones no disfrutadas del pack en ningún caso.',
+  {
+    title: 'Bono 10 sesiones de fisioterapia',
+    price: '400€',
+    subtitle: '10 sesiones',
+    badge: 'Ahorro de 50€',
+    featured: true,
+  },
+  {
+    title: 'Pilates funcional',
+    price: '55€/mes',
+    subtitle: '1 día a la semana',
+    badge: 'Trimestre: 150€',
+    featured: false,
+  },
+  {
+    title: 'Pilates funcional',
+    price: '90€/mes',
+    subtitle: '2 días a la semana',
+    badge: 'Trimestre: 245€',
+    featured: false,
+  },
 ]
 
 const Pricing = () => {
   return (
-    <section id="tarifas" className="scroll-mt-28 bg-[#f5f5f3] py-24 pb-12">
+    <section
+      id="tarifas"
+      className="scroll-mt-28 bg-[#f5f5f3] pt-24 pb-10"
+    >
       <div className="mx-auto max-w-7xl px-4">
-        <div className="mx-auto mb-14 max-w-3xl text-center">
-          <h2 className="text-3xl font-extrabold text-black sm:text-4xl">
+        {/* Header */}
+        <div className="mx-auto mb-12 max-w-3xl text-center">
+          <span className="inline-block rounded-full bg-[#E4B525] px-5 py-2 text-sm font-bold text-black">
+            Tarifas
+          </span>
+
+          <h2 className="mt-5 text-3xl font-extrabold text-black sm:text-4xl">
             Nuestras tarifas
           </h2>
 
@@ -41,50 +65,45 @@ const Pricing = () => {
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        {/* Grid */}
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {plans.map((plan, index) => (
             <article
               key={index}
-              className="rounded-xl bg-[#f8f1d6] px-8 py-10 text-center shadow-[0_6px_18px_rgba(0,0,0,0.06)]"
+              className={`relative overflow-hidden rounded-3xl px-7 pb-9 pt-10 text-center shadow-[0_12px_35px_rgba(0,0,0,0.08)] transition duration-300 hover:-translate-y-2 ${
+                plan.featured
+                  ? 'bg-[#dfe9eb] ring-2 ring-[#E4B525]'
+                  : 'bg-[#f8f1d6]'
+              }`}
             >
-              <h3 className="text-2xl font-extrabold text-black">
+              {/* Badge BONO */}
+              {plan.featured && (
+                <span className="absolute right-4 top-4 rounded-full bg-[#E4B525] px-3 py-1 text-xs font-extrabold uppercase tracking-wide text-black shadow-sm">
+                  Bono
+                </span>
+              )}
+
+              <h3 className="mx-auto max-w-xs text-xl font-extrabold leading-7 text-black">
                 {plan.title}
               </h3>
 
-              <p className="mt-5 text-6xl font-extrabold tracking-tight text-black">
+              <p className="mt-6 text-5xl font-extrabold tracking-tight text-black">
                 {plan.price}
               </p>
 
-              <p className="mt-4 text-xl text-neutral-700">
+              <p className="mt-4 text-lg font-semibold text-neutral-700">
                 {plan.subtitle}
               </p>
 
               {plan.badge && (
-                <div className="mt-5">
-                  <span className="inline-flex rounded-full bg-[#E4B525] px-4 py-1.5 text-sm font-bold text-black">
+                <div className="mt-6">
+                  <span className="inline-flex rounded-full bg-white px-4 py-2 text-sm font-bold text-black shadow-sm">
                     {plan.badge}
                   </span>
                 </div>
               )}
             </article>
           ))}
-        </div>
-
-        <div className="mx-auto mt-12 max-w-4xl rounded-xl bg-[#f8f1d6] px-8 py-10 shadow-[0_8px_24px_rgba(0,0,0,0.06)]">
-          <h3 className="text-center text-2xl font-extrabold text-black">
-            Condiciones Generales
-          </h3>
-
-          <div className="mt-8 space-y-5">
-            {conditions.map((condition, index) => (
-              <div key={index} className="flex items-start gap-4">
-                <span className="mt-1 text-xl font-bold text-[#E4B525]">✓</span>
-                <p className="text-lg leading-8 text-neutral-700">
-                  {condition}
-                </p>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>

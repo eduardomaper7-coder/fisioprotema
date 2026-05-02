@@ -15,6 +15,29 @@ const slides = [
   },
 ]
 
+const features = [
+  {
+    title: 'Atención 100% personalizada',
+    text: 'Diseñamos cada tratamiento en función de tu problema específico, adaptándonos a tu evolución en cada sesión.',
+  },
+  {
+    title: 'Fisioterapia avanzada y precisa',
+    text: 'Trabajamos con técnicas invasivas eco-guiadas, diatermia y ondas de choque para ofrecer tratamientos más eficaces y seguros.',
+  },
+  {
+    title: 'Experiencia y formación continua',
+    text: 'Contamos con profesionales cualificados y en constante formación para aplicar las técnicas más actuales.',
+  },
+  {
+    title: 'Resultados desde las primeras sesiones',
+    text: 'Aplicamos tratamientos eficaces para que notes mejoría desde el inicio del proceso.',
+  },
+  {
+    title: 'Trato cercano y acompañamiento real',
+    text: 'Nos implicamos contigo en todo el proceso de recuperación, acompañándote en cada paso.',
+  },
+]
+
 const WhyUs = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
 
@@ -29,7 +52,6 @@ const WhyUs = () => {
   return (
     <section className="bg-[#eef0f1] py-24">
       <div className="mx-auto grid max-w-7xl items-center gap-16 px-4 lg:grid-cols-2">
-        
         {/* IZQUIERDA */}
         <div className="relative">
           <span className="absolute -left-10 top-0 hidden rotate-180 text-xs font-bold uppercase tracking-[0.4em] text-[#E4B525] lg:block [writing-mode:vertical-rl]">
@@ -46,49 +68,23 @@ const WhyUs = () => {
             </h2>
 
             <p className="mt-6 text-lg leading-9 text-neutral-700">
-              En Fisioprotema no solo tratamos lesiones, nos enfocamos en mejorar tu
-              calidad de vida. Cada paciente recibe una atención personalizada,
-              adaptada a sus necesidades reales.
+              En FisioProtema no solo tratamos lesiones, nos enfocamos en
+              mejorar tu calidad de vida. Cada paciente recibe una atención
+              personalizada, adaptada a sus necesidades reales, con un enfoque
+              profesional, cercano y basado en la evidencia.
             </p>
 
             <div className="mt-10 space-y-8">
-              
-              <div>
-                <h3 className="text-2xl font-extrabold text-[#E4B525]">
-                  Atención 100% personalizada
-                </h3>
-                <p className="mt-2 text-lg text-neutral-600">
-                  Diseñamos cada tratamiento en función de tu problema específico.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-2xl font-extrabold text-[#E4B525]">
-                  Experiencia y profesionalidad
-                </h3>
-                <p className="mt-2 text-lg text-neutral-600">
-                  Contamos con especialistas cualificados y en constante formación.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-2xl font-extrabold text-[#E4B525]">
-                  Resultados desde la primera sesión
-                </h3>
-                <p className="mt-2 text-lg text-neutral-600">
-                  Aplicamos técnicas eficaces para notar mejoría rápidamente.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-2xl font-extrabold text-[#E4B525]">
-                  Trato cercano y humano
-                </h3>
-                <p className="mt-2 text-lg text-neutral-600">
-                  Nos implicamos contigo en todo el proceso de recuperación.
-                </p>
-              </div>
-
+              {features.map((feature, index) => (
+                <div key={index}>
+                  <h3 className="text-2xl font-extrabold text-[#E4B525]">
+                    {feature.title}
+                  </h3>
+                  <p className="mt-2 text-lg text-neutral-600">
+                    {feature.text}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

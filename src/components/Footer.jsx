@@ -1,4 +1,4 @@
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
+import { FaFacebookF, FaInstagram } from 'react-icons/fa'
 
 const Footer = () => {
   return (
@@ -6,11 +6,17 @@ const Footer = () => {
       <div className="mx-auto max-w-7xl px-4 py-16">
         <div className="grid gap-12 md:grid-cols-2 md:items-start">
           <div>
-            <div className="mb-6">
+            <div className="mb-6 flex items-center gap-3">
               <img
-                src="/logo.png"
+                src="/logo-circular-blanco.png"
+                alt="Logo circular Fisioprotema"
+                className="h-12 w-12 object-contain"
+              />
+
+              <img
+                src="/logo-hero-blanco.png"
                 alt="Logo Fisioprotema"
-                className="h-14 w-auto object-contain"
+                className="h-10 w-auto object-contain"
               />
             </div>
 
@@ -18,15 +24,25 @@ const Footer = () => {
               Clínica de fisioterapia avanzada con tratamientos personalizados para mejorar tu calidad de vida.
             </p>
 
-            <div className="mt-8 flex items-center gap-5">
-              <a href="#" aria-label="Facebook" className="text-2xl text-[#E4B525] transition hover:text-white">
-                <FaFacebookF />
+            <div className="mt-8 flex flex-col gap-4">
+              <a
+                href="https://www.facebook.com/fisioprotema_leganes"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-3 text-lg text-[#E4B525] transition hover:text-white"
+              >
+                <FaFacebookF className="text-2xl" />
+                @fisioprotema_leganes
               </a>
-              <a href="#" aria-label="Instagram" className="text-2xl text-[#E4B525] transition hover:text-white">
-                <FaInstagram />
-              </a>
-              <a href="#" aria-label="LinkedIn" className="text-2xl text-[#E4B525] transition hover:text-white">
-                <FaLinkedinIn />
+
+              <a
+                href="https://www.instagram.com/fisioprotema_leganes"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-3 text-lg text-[#E4B525] transition hover:text-white"
+              >
+                <FaInstagram className="text-2xl" />
+                @fisioprotema_leganes
               </a>
             </div>
           </div>
@@ -61,13 +77,13 @@ const Footer = () => {
           </p>
 
           <div className="mt-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-base text-[#E4B525]">
-            <a href="#" className="transition hover:text-white">
+            <a href="/politica-cookies" className="transition hover:text-white">
               Política de cookies
             </a>
-            <a href="#" className="transition hover:text-white">
+            <a href="/politica-privacidad" className="transition hover:text-white">
               Política de privacidad
             </a>
-            <a href="#" className="transition hover:text-white">
+            <a href="/aviso-legal" className="transition hover:text-white">
               Aviso legal
             </a>
           </div>

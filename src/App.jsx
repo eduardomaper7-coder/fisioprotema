@@ -11,6 +11,7 @@ import Pricing from './components/Pricing'
 import BlogSection from './components/BlogSection'
 import Location from './components/Location'
 import ContactSection from './components/ContactSection'
+import CertificacionSection from './components/CertificacionSection' // 👈 AÑADIDO
 import Footer from './components/Footer'
 
 import PoliticaCookies from './pages/PoliticaCookies'
@@ -30,6 +31,7 @@ const Home = () => {
       <BlogSection />
       <Location />
       <ContactSection />
+      <CertificacionSection /> {/* 👈 NUEVA SECCIÓN */}
     </>
   )
 }

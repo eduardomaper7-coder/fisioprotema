@@ -2,16 +2,14 @@ import { useEffect, useState } from 'react'
 
 const slides = [
   {
-    image:
-      'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1200&q=80',
+    image: '/equipo-1.jpeg',
     alt: 'Pilar Cejudo fisioterapeuta',
     name: 'Pilar Cejudo',
     role: 'Fisioterapeuta',
     stat: '+500 pacientes atendidos',
   },
   {
-    image:
-      'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=1200&q=80',
+    image: '/equipo-2.jpeg',
     alt: 'Especialista en fisioterapia',
     name: 'Nombre Apellido',
     role: 'Fisioterapeuta',
@@ -116,13 +114,13 @@ const WhyUs = () => {
         {/* DERECHA - SLIDER */}
         <div className="relative">
           <div className="relative overflow-hidden rounded-[32px] shadow-[0_20px_60px_rgba(0,0,0,0.18)]">
-            <div className="relative h-[540px] w-full">
+            <div className="relative h-[680px] w-full">
               {slides.map((slide, index) => (
                 <img
                   key={index}
                   src={slide.image}
                   alt={slide.alt}
-                  className={`absolute inset-0 h-full w-full object-cover transition-all duration-1000 ${
+                  className={`absolute inset-0 h-full w-full object-cover object-center transition-all duration-1000 ${
                     currentSlide === index
                       ? 'opacity-100 scale-100'
                       : 'opacity-0 scale-105'
@@ -130,9 +128,9 @@ const WhyUs = () => {
                 />
               ))}
 
-              <div className="absolute inset-0 bg-black/20"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent"></div>
 
-              <div className="absolute left-6 top-6 z-10 max-w-sm rounded-2xl bg-white/95 px-5 py-4 shadow-lg backdrop-blur-sm">
+              <div className="absolute bottom-6 left-6 right-6 z-10 rounded-2xl bg-white/95 px-6 py-5 shadow-lg backdrop-blur-sm">
                 <p className="text-lg font-extrabold leading-7 text-black">
                   {activeSlide.name},{' '}
                   <span className="font-semibold">{activeSlide.role}</span>

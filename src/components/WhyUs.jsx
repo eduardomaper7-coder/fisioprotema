@@ -2,18 +2,20 @@ import { useEffect, useState } from 'react'
 
 const slides = [
   {
-    image: '/equipo-1.jpeg',
+    image: '/equipo-1.tmp',
     alt: 'Pilar Cejudo fisioterapeuta',
     name: 'Pilar Cejudo',
-    role: 'Fisioterapeuta',
-    stat: '+500 pacientes atendidos',
+    role: 'Fisioterapeuta. Col. 8772',
+    specialty:
+      'Especialista en terapia manual, dolor musculoesquelético, dolor orofacial y ATM.',
   },
   {
     image: '/equipo-2.jpeg',
-    alt: 'Especialista en fisioterapia',
-    name: 'Nombre Apellido',
-    role: 'Fisioterapeuta',
-    stat: '+10 años de experiencia',
+    alt: 'David Domingo fisioterapeuta',
+    name: 'David Domingo',
+    role: 'Fisioterapeuta. Col. 14956',
+    specialty:
+      'Especialista en terapia manual, dolor musculoesquelético y ejercicio terapéutico.',
   },
 ]
 
@@ -58,7 +60,7 @@ const WhyUs = () => {
         {/* IZQUIERDA */}
         <div className="relative">
           <span className="absolute -left-10 top-0 hidden rotate-180 text-xs font-bold uppercase tracking-[0.4em] text-[#E4B525] lg:block [writing-mode:vertical-rl]">
-            Fisioprotema
+            FisioProtema
           </span>
 
           <div className="max-w-xl">
@@ -67,7 +69,7 @@ const WhyUs = () => {
             </span>
 
             <h2 className="mt-5 text-4xl font-extrabold leading-tight text-black sm:text-5xl">
-              ¿Por qué elegir Fisioprotema?
+              ¿Por qué elegir FisioProtema?
             </h2>
 
             <p className="mt-6 text-lg leading-9 text-neutral-700">
@@ -130,14 +132,17 @@ const WhyUs = () => {
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent"></div>
 
-              <div className="absolute bottom-6 left-6 right-6 z-10 rounded-2xl bg-white/95 px-6 py-5 shadow-lg backdrop-blur-sm">
-                <p className="text-lg font-extrabold leading-7 text-black">
-                  {activeSlide.name},{' '}
-                  <span className="font-semibold">{activeSlide.role}</span>
+              <div className="absolute bottom-6 left-6 right-6 z-10 rounded-3xl border border-white/40 bg-white/95 px-7 py-6 shadow-xl backdrop-blur-md">
+                <h3 className="text-2xl font-extrabold text-black">
+                  {activeSlide.name}
+                </h3>
+
+                <p className="mt-1 text-sm font-semibold text-[#E4B525]">
+                  {activeSlide.role}
                 </p>
 
-                <p className="mt-2 text-base font-bold text-[#E4B525]">
-                  {activeSlide.stat}
+                <p className="mt-3 text-sm leading-6 text-neutral-700">
+                  {activeSlide.specialty}
                 </p>
               </div>
             </div>

@@ -7,7 +7,7 @@ const FeaturedBox = () => {
           {/* Imagen */}
           <div className="h-[260px] w-full lg:h-[520px] lg:w-[62%]">
             <img
-              src="/fisioterapia.jpg"
+              src="/featured-fisio.jpeg"
               alt="Fisioterapia profesional"
               className="h-full w-full object-cover"
             />
@@ -23,7 +23,7 @@ const FeaturedBox = () => {
               </h2>
 
               <p className="mt-4 text-sm leading-7 text-neutral-600 sm:text-lg">
-                En Fisioprotema estudiamos tu caso de forma individual para ayudarte
+                En FisioProtema estudiamos tu caso de forma individual para ayudarte
                 a reducir el dolor, mejorar tu movilidad y acelerar tu recuperación.
               </p>
 

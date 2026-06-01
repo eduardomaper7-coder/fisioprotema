@@ -10,12 +10,14 @@ const CertificacionSection = () => {
 
         {/* SUBTÍTULO */}
         <p className="mx-auto mt-4 mb-10 max-w-3xl text-center text-lg leading-8 text-neutral-600">
-          Formamos parte de la guía oficial del Colegio Profesional de Fisioterapeutas de Madrid
+          Formamos parte de la guía oficial del Colegio Profesional de
+          Fisioterapeutas de Madrid
         </p>
 
+        {/* PRIMERA FILA */}
         <div className="grid gap-6 md:grid-cols-2">
 
-          {/* IZQUIERDA → CON MARCO BLANCO */}
+          {/* IZQUIERDA */}
           <div className="overflow-hidden rounded-2xl bg-white p-4 shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
             <img
               src="/colegio-banner.jpeg"
@@ -24,7 +26,7 @@ const CertificacionSection = () => {
             />
           </div>
 
-          {/* DERECHA → SIN MARCO BLANCO */}
+          {/* DERECHA */}
           <div className="flex items-center justify-center overflow-hidden rounded-2xl shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
             <img
               src="/colegio-logo.png"
@@ -34,6 +36,18 @@ const CertificacionSection = () => {
           </div>
 
         </div>
+
+        {/* SEGUNDA FILA - FOTO NUEVA CENTRADA */}
+        <div className="mt-6 flex justify-center">
+          <div className="w-full md:w-[50%] overflow-hidden rounded-2xl bg-white p-4 shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
+            <img
+              src="/colegio-extra.png"
+              alt="Certificación oficial adicional"
+              className="block w-full object-contain"
+            />
+          </div>
+        </div>
+
       </div>
     </section>
   )

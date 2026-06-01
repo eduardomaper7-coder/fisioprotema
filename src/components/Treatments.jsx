@@ -1,32 +1,28 @@
 const services = [
   {
-    title: 'Fisioterapia General y Avanzada',
-    description:
-      'Fisioterapia personalizada con técnicas invasivas eco-guiadas, diatermia y ondas de choque para aliviar el dolor, mejorar tu movilidad y acelerar tu recuperación.',
-    image:
-      'https://images.unsplash.com/photo-1519824145371-296894a0daa9?auto=format&fit=crop&w=1200&q=80',
-    featured: true,
-  },
+  title: 'Fisioterapia General y Avanzada',
+  description:
+    'Fisioterapia personalizada mediante terapia manual, ejercicio terapéutico y técnicas avanzadas para aliviar el dolor, mejorar la movilidad y acelerar la recuperación. Trabajamos con técnicas invasivas eco-guiadas (punción seca, electrólisis percutánea EPTE® y neuromodulación percutánea), además de diatermia y ondas de choque, ofreciendo tratamientos precisos y adaptados a cada paciente.',
+  image: '/servicio-general.jpeg',
+  featured: true,
+},
   {
     title: 'Fisioterapia deportiva',
     description:
       'Recupera tu rendimiento y vuelve al deporte sin dolor con un tratamiento personalizado y una readaptación eficaz.',
-    image:
-      'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=900&q=80',
+    image: '/servicio-deportiva.jpeg',
   },
   {
     title: 'Dolor Orofacial y ATM',
     description:
       'Alivia el dolor mandibular, bruxismo y cefaleas con un tratamiento especializado de la ATM.',
-    image:
-      'https://images.unsplash.com/photo-1604881991720-f91add269bed?auto=format&fit=crop&w=900&q=80',
+    image: '/servicio-atm.jpeg',
   },
   {
     title: 'Pilates Funcional',
     description:
       'Mejora tu fuerza, movilidad y control corporal con ejercicio terapéutico adaptado a tus necesidades. Clases reducidas, guiadas por profesionales, ideales para prevenir lesiones, mejorar la postura y reducir el dolor de espalda.',
-    image:
-      'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=80',
+    image: '/servicio-pilates.jpeg',
   },
   {
     title: 'Psicología',
@@ -34,9 +30,9 @@ const services = [
     name: 'Ana Margüenda Timón',
     description:
       'Acompañamiento psicológico profesional para cuidar también tu bienestar emocional.',
-    image:
-      'https://images.unsplash.com/photo-1551847677-dc82d764e1eb?auto=format&fit=crop&w=900&q=80',
-    doctoralia: 'https://www.doctoralia.es/ana-marguenda-timon/psicologo/leganes',
+    image: '/servicio-psicologia.jpeg',
+    doctoralia:
+      'https://www.doctoralia.es/ana-marguenda-timon/psicologo/leganes',
     whatsapp: 'https://wa.me/34683379771',
     psychology: true,
   },
@@ -110,11 +106,11 @@ const Treatments = () => {
                   </p>
 
                   {service.psychology && (
-  <p className="mt-3 text-sm font-semibold leading-6 text-neutral-700">
-    WhatsApp exclusivo para psicología:
-    <span className="block md:inline"> 683 37 97 71</span>
-  </p>
-)}
+                    <p className="mt-3 text-sm font-semibold leading-6 text-neutral-700">
+                      WhatsApp exclusivo para psicología:
+                      <span className="block md:inline"> 683 37 97 71</span>
+                    </p>
+                  )}
                 </div>
 
                 <div className="mt-6 flex flex-wrap gap-4">

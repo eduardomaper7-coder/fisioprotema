@@ -19,7 +19,7 @@ const Hero = () => {
         {/* LOGO (solo desktop) */}
         <img
           src="/logo-hero.png"
-          alt="Fisioprotema"
+          alt="FisioProtema"
           className="mb-8 hidden h-16 w-auto md:block md:h-20"
         />
 

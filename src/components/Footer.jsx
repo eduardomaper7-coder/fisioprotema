@@ -9,13 +9,13 @@ const Footer = () => {
             <div className="mb-6 flex items-center gap-3">
               <img
                 src="/logo-circular-blanco.png"
-                alt="Logo circular Fisioprotema"
+                alt="Logo circular FisioProtema"
                 className="h-12 w-12 object-contain"
               />
 
               <img
                 src="/logo-hero-blanco.png"
-                alt="Logo Fisioprotema"
+                alt="Logo FisioProtema"
                 className="h-10 w-auto object-contain"
               />
             </div>
@@ -73,7 +73,7 @@ const Footer = () => {
 
         <div className="mt-12 border-t border-white/15 pt-8 text-center">
           <p className="text-lg text-white/90">
-            © 2026 Fisioprotema. Todos los derechos reservados.
+            © 2026 FisioProtema. Todos los derechos reservados.
           </p>
 
           <div className="mt-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-base text-[#E4B525]">

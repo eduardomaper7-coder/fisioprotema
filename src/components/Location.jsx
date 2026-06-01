@@ -23,7 +23,7 @@ const Location = () => {
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Ubicación clínica fisioprotema"
+            title="Ubicación clínica fisioProtema"
           ></iframe>
         </div>
 

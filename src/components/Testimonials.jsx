@@ -1,18 +1,23 @@
 const reviews = [
   {
-    text: 'Excelente atención desde el momento de pedir la cita hasta la consulta de fisioterapia. Diagnóstico y tratamiento de 10, para mí se han convertido en mi centro de fisioterapia de confianza desde que acudí la primera vez hace años. Precios asequibles/ajustados, aún más teniendo en cuenta la calidad del servicio. Más que recomendadas.',
-    name: 'Alba',
-    time: 'Hace 1 año',
+    text: 'Llevo 1 año con David. Me ha aliviado mis dolores crónicos. Encantada de esta clínica.',
+    name: 'Maricarmen Martin',
+    time: 'Hace un mes',
   },
   {
-    text: 'Tenía un dolor molesto en la zona de la espalda y me lo han tratado muy bien. Estoy muy contento con la forma de trabajar. Primero me explicaron el problema y luego detectaron dónde estaba el problema. Método científico aplicado al dedillo. Muy profesional, amable y simpática. Me sentí muy seguro en todo el proceso. Volveré.',
-    name: 'K. Meneses',
-    time: 'Hace 3 meses',
+    text: 'Vine por recomendación de mi compañero del gimnasio y la verdad que lo mejor que he podido hacer. Nada que ver con mis anteriores experiencias en otros fisios. Mira que está lejos de donde vivo, pero merece la pena sin duda. Lo recomendaré a mis conocidos.',
+    name: 'Guillermo Velasco',
+    time: 'Hace un mes',
   },
   {
-    text: 'Me siento afortunada de haber encontrado un grupo de profesionales que se ocupan en ayudar a las personas a escuchar su cuerpo y dichos profesionales enseñan métodos para que cada uno sea capaz de cuidarse. Los felicito por su buen hacer y les doy las gracias por ayudarme.',
-    name: 'P. Fernández',
-    time: 'Hace 1 año',
+    text: 'Uno de los mejores centros de fisioterapia en Leganés. Al frente Pilar, profesional y volcada con sus pacientes. Recomendable siempre.',
+    name: 'Mercedes Tostón',
+    time: 'Hace 4 años',
+  },
+  {
+    text: 'Muy buena clínica y muy bien equipada. Los fisios en especial Pilar muy profesionales. Me trataron satisfactoriamente una tendinitis en el talón de aquiles.',
+    name: 'Paco Manzano',
+    time: 'Hace 3 años',
   },
 ]
 
@@ -34,7 +39,7 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
           {reviews.map((review, index) => (
             <article
               key={index}

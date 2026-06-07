@@ -7,7 +7,7 @@ const slides = [
     name: 'Pilar Cejudo',
     role: 'Fisioterapeuta. Col. 8772',
     specialty:
-      'Especialista en terapia manual, dolor musculoesquelético, dolor orofacial y ATM.',
+      'Especialista en terapia manual, dolor musculoesquelético, técnicas invasivas eco-guiadas, dolor orofacial y ATM.',
   },
   {
     image: '/equipo-2.jpeg',
@@ -15,7 +15,7 @@ const slides = [
     name: 'David Domingo',
     role: 'Fisioterapeuta. Col. 14956',
     specialty:
-      'Especialista en terapia manual, dolor musculoesquelético y ejercicio terapéutico.',
+      'Especialista en terapia manual, dolor musculoesquelético, técnicas invasivas eco-guiadas y ejercicio terapéutico.',
   },
 ]
 

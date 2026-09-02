@@ -17,6 +17,14 @@ const slides = [
     specialty:
       'Especialista en terapia manual, dolor musculoesquelético, técnicas invasivas eco-guiadas y ejercicio terapéutico.',
   },
+  {
+    image: '/equipo-3.jpg',
+    alt: 'Adrián Román fisioterapeuta',
+    name: 'Adrián Román',
+    role: 'Fisioterapeuta. Col. 19283 y CAFYD',
+    specialty:
+      'Especialista en terapia manual, dolor musculoesquelético, fisioterapia deportiva y ejercicio funcional.',
+  },
 ]
 
 const features = [

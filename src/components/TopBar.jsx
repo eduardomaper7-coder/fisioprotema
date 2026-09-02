@@ -6,13 +6,13 @@ const Navbar = () => {
         <a href="#inicio" className="flex min-w-0 items-center gap-2 md:gap-3">
           <img
             src="/logo-circular.png"
-            alt="Logo circular Fisioprotema"
+            alt="Logo circular FisioProtema"
             className="h-9 w-9 shrink-0 object-contain md:h-10 md:w-10"
           />
 
           <img
             src="/logo.png"
-            alt="Logo Fisioprotema"
+            alt="Logo FisioProtema"
             className="h-5 w-auto max-w-[130px] object-contain md:h-7 md:max-w-none"
           />
         </a>

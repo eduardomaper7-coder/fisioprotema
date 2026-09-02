@@ -1,7 +1,7 @@
 const plans = [
   {
     title: 'Sesión de fisioterapia',
-    price: '45€',
+    price: '47€',
     subtitle: 'Sesión individual',
     badge: '',
     featured: false,
